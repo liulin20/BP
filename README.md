@@ -26,8 +26,3 @@ testoutput=mapminmax('reverse',normtestoutput,ts)
 trainvalue=mapminmax('reverse',trainsample.t,ts)
 validatevalue=mapminmax('reverse',valsample.t,ts)
 testvalue=mapminmax('reverse',testsample.t,ts)
-errors=trainvalue-trainoutput
-figure,plotregression(trainvalue,trainoutput)
-figure,plot(1:length(errors),errors,'-b')
-figure,hist(errors)
-figure,normplot(errors)
